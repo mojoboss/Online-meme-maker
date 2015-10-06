@@ -14,7 +14,11 @@
 			console.log("loaded image");
 			ctx.drawImage(image, 0, 0, c.width, c.height);
 		}
-		image.src = "img.jpg";
+		image.src = "img.jpg"; //images are loaded asynchronously in canvas
+
+		//to save images created on canvas
+		var savedImage = c.toDataURL();
+		window.open(savedImage);
 	</script>
 
 </body>
