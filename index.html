@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Meme Generator</title>
+</head>
+<body>
+	<canvas id="c" width="500", height="500"></canvas>
+	
+	<script>
+		var c = document.querySelector("#c");
+		var ctx = c.getContext("2d");
+		var image = new Image();
+		image.onload = function(){
+			console.log("loaded image");
+			ctx.drawImage(image, 0, 0, c.width, c.height);
+		}
+		image.src = "img.jpg";
+	</script>
+
+</body>
+</html>
